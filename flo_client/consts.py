@@ -6,8 +6,10 @@ DATA_FOLDER = "data"
 
 # Base URL for API requests.
 BASE_URL = "https://emobility.flo.ca"
-STATIONS_URL = BASE_URL + "/v3.0/user/stations"
-SESSIONS_URL = BASE_URL + "/v3.0/user/sessions"
+STATIONS_30_URL = BASE_URL + "/v3.0/user/stations"
+STATIONS_31_URL = BASE_URL + "/v3.1/homestation"
+SESSIONS_30_URL = BASE_URL + "/v3.0/user/sessions"
+SESSIONS_31_URL = BASE_URL + "/v3.1/user/sessions"
 
 # Identity provider information and URLs
 ACCOUNT_ID = "6cedc65f-98e2-4651-bdb8-88ee4936c9ba"
@@ -23,11 +25,13 @@ REFRESH_DELAY_SECS = 60
 
 # Status constants
 STATUS_KEY = "status"
+CONNECTION_STATUS_KEY = "connectionStatus"
 
 # Charging station state
 STATE_KEY = "state"
 STATE_AVAILABLE = "Available"
 STATE_INUSE = "InUse"
+STATE_ONLINE = "Online"
 
 # Vehicle state
 PILOT_STATE_KEY = "pilotSignalState"
@@ -36,9 +40,13 @@ PILOT_STATE_CONNECTED = "B"
 PILOT_STATE_CHARGING = "C"
 
 # Session state
+SESSION_STATE_KEY = "sessionState"
 SESSION_NOT_CHARGING = "NotCharging"
 SESSION_CHARGING = "Charging"
 SESSION_COMPLETED = "Completed"
+
+#V3.1 Status/Usage
+USE_KEY = "evse"
 
 # Session constants
 SESSION_ID = "id"
